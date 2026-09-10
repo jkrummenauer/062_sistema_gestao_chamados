@@ -1,0 +1,24 @@
+@startuml
+
+title C4 - Nível 1 - Diagrama de Contexto
+
+top to bottom direction
+
+actor "Cliente" as cliente
+actor "Administrador" as adm
+
+rectangle "Sistema de\nGestão de\nChamados" as sistema
+rectangle "Servidor de E-mail" as email
+rectangle "Banco de Dados" as db
+
+' Mantém Cliente e Administrador lado a lado
+cliente -[hidden]right- adm
+
+' Relacionamentos
+cliente --> sistema : Envia solicitação\ne acompanha status
+adm --> sistema : Gerencia o sistema\ne seus recursos
+
+sistema --> email : Envia e recebe\ne-mails de notificação
+sistema -> db : Armazena e\nrecupera dados
+
+@enduml

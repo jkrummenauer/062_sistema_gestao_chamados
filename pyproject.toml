@@ -1,0 +1,13 @@
+[project]
+name = "062_sistema_gestao_chamados"
+version = "0.1.0"
+description = "Projeto Python"
+authors = [
+    {name = "Argon Core Solutions - JLK"}
+]
+
+requires-python = ">=3.13"
+
+dependencies = [
+    'pytest>=9.1.1'
+]

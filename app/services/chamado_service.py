@@ -1,0 +1,2 @@
+class ChamadoService:
+    pass
